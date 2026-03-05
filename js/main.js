@@ -245,7 +245,7 @@ window.addEventListener('load', function() {
 // Sample developer portfolios data
 const developers = [
     {
-        name: "Desarrollador 1",
+        name: "Felipe Narvaes",
         role: "Full Stack Developer",
         description: "Especializado en desarrollo web moderno con experiencia en aplicaciones escalables.",
         services: [
@@ -254,11 +254,12 @@ const developers = [
             "Diseño de APIs REST"
         ],
         technologies: ["JavaScript", "React", "Node.js", "MongoDB"],
-        github: "https://github.com/dev1"
+        github: "https://github.com/dev1",
+        portfolio: "portafolio/dev1/index.html"
     },
     {
-        name: "Desarrollador 2",
-        role: "Frontend Developer",
+        name: "Fernando Rosero",
+        role: "Frontend Developer & UI/UX Designer",
         description: "Experto en crear interfaces de usuario atractivas y responsivas.",
         services: [
             "Diseño UI/UX",
@@ -266,11 +267,12 @@ const developers = [
             "Optimización Web"
         ],
         technologies: ["HTML", "CSS", "JavaScript", "Vue.js"],
-        github: "https://github.com/dev2"
+        github: "https://github.com/dev2",
+        portfolio: "portafolio/dev2/index.html"
     },
     {
-        name: "Desarrollador 3",
-        role: "Backend Developer",
+        name: "Nicol Muñoz",
+        role: "Backend Developer & Database Specialist",
         description: "Especialista en arquitectura de servidores y bases de datos.",
         services: [
             "Desarrollo de APIs",
@@ -278,11 +280,12 @@ const developers = [
             "Arquitectura Cloud"
         ],
         technologies: ["Python", "Django", "PostgreSQL", "AWS"],
-        github: "https://github.com/dev3"
+        github: "https://github.com/dev3",
+        portfolio: "portafolio/dev3/index.html"
     },
     {
-        name: "Desarrollador 4",
-        role: "DevOps Engineer",
+        name: "Yeraldin Araujo",
+        role: "DevOps Engineer & Cloud Architect",
         description: "Enfocado en automatización, CI/CD y gestión de infraestructura.",
         services: [
             "Automatización",
@@ -290,13 +293,14 @@ const developers = [
             "Gestión de Contenedores"
         ],
         technologies: ["Docker", "Kubernetes", "Jenkins", "Terraform"],
-        github: "https://github.com/dev4"
+        github: "https://github.com/dev4",
+        portfolio: "portafolio/dev4/index.html"
     }
 ];
 
 // Function to create portfolio cards
 function createPortfolioCard(dev, index) {
-    const initial = dev.name.charAt(dev.name.length - 1);
+    const initials = dev.name.split(' ').map(n => n.charAt(0)).join('');
     const colors = [
         'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
@@ -307,7 +311,7 @@ function createPortfolioCard(dev, index) {
     return `
         <div class="portfolio-card">
             <div class="portfolio-avatar" style="background: ${colors[index]}">
-                ${initial}
+                ${initials}
             </div>
             <h3>${dev.name}</h3>
             <p class="portfolio-role">${dev.role}</p>
@@ -327,13 +331,18 @@ function createPortfolioCard(dev, index) {
                 </div>
             </div>
             
-            <a href="${dev.github}" class="portfolio-github" target="_blank">Ver GitHub</a>
+            <div class="portfolio-actions">
+                <a href="${dev.portfolio}" class="portfolio-btn portfolio-view">Ver Portafolio</a>
+                <a href="${dev.github}" class="portfolio-btn portfolio-github" target="_blank">GitHub</a>
+            </div>
         </div>
     `;
 }
 
 // Load portfolios on page load
 window.addEventListener('load', function() {
+    console.log('Loading portfolios and setting up navigation...');
+    
     const portfolioGrid = document.getElementById('portfolioGrid');
     
     if (portfolioGrid) {
@@ -363,20 +372,44 @@ window.addEventListener('load', function() {
             }
         });
     }
+});
+
+// Smooth scroll functionality - Execute after DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Setting up smooth scroll...');
     
-    // Add smooth scroll behavior
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    // Handle all anchor links with smooth scroll
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[href^="#"]');
+        if (link) {
+            const href = link.getAttribute('href');
+            console.log('Clicked link with href:', href);
+            
+            if (href && href !== '#') {
+                e.preventDefault();
+                const targetId = href.substring(1); // Remove the #
+                const target = document.getElementById(targetId);
+                
+                console.log('Looking for element with id:', targetId);
+                console.log('Found target:', target);
+                
+                if (target) {
+                    console.log('Scrolling to target...');
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.error('Target element not found:', targetId);
+                }
             }
-        });
+        }
     });
+    
+    console.log('Smooth scroll setup complete');
 });
 
 // Handle cart icon click
