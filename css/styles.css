@@ -599,28 +599,43 @@ body {
     overflow: hidden;
     transition: all 0.3s;
     cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.promo-banner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.05) 100%);
+    pointer-events: none;
 }
 
 .promo-banner-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .promo-banner-card.yellow {
-    background: linear-gradient(135deg, #FFE600 0%, #FFD700 100%);
+    background: linear-gradient(135deg, #FFE600 0%, #FFC700 50%, #FFB800 100%);
+    box-shadow: 0 4px 15px rgba(255, 230, 0, 0.3);
 }
 
 .promo-banner-card.red {
-    background: linear-gradient(135deg, #C41E3A 0%, #A01828 100%);
+    background: linear-gradient(135deg, #E63946 0%, #C41E3A 50%, #A01828 100%);
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
 }
 
 .promo-banner-card.black {
-    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    background: linear-gradient(135deg, #2C2C2C 0%, #1a1a1a 50%, #000000 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .promo-banner-card.orange {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 50%, #FF5722 100%);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .promo-content {
