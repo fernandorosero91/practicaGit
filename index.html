@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre Colombia - Envíos Gratis en el día</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <div class="header-row-1">
+                    <div class="logo">
+                        <img src="img/logoMercadoLibre.png" alt="Mercado Libre" class="logo-img">
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar productos, marcas y más..." class="search-input">
+                        <button class="search-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z" fill="#333"/>
+                            </svg>
+                        </button>
+                    </div>
+                   
+                </div>
+                
+                <div class="header-row-2">
+                    <div class="location">
+                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none">
+                            <path d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 18 7 18C7 18 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="rgba(0,0,0,.55)"/>
+                        </svg>
+                        <span>Enviar a</span>
+                        <strong>Pasto</strong>
+                    </div>
+                    
+                    <nav class="header-nav">
+                        <a href="#">Categorías</a>
+                        <a href="#ofertas">Ofertas</a>
+                        <a href="#">Cupones</a>
+                        <a href="#">Supermercado</a>
+                        <a href="#">Moda</a>
+                        <a href="#">Vender</a>
+                        <a href="#">Ayuda / PQR</a>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <a href="#" class="header-link">Crea tu cuenta</a>
+                        <a href="#" class="header-link">Ingresa</a>
+                        <a href="#" class="header-link">Mis compras</a>
+                        <a href="#" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.96 5.34 21 5.17 21 5C21 4.45 20.55 4 20 4H5.21L4.27 2H1ZM17 18C15.9 18 15.01 18.9 15.01 20C15.01 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z" fill="rgba(51,51,51,.7)"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            
+            <div class="carousel-slides">
+                <div class="carousel-slide active" style="background-image: url('img/img1.png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/img2.png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/img3.png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/img4.png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/img5.png');">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                </svg>
+            </button>
+
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-scroll-container">
+                <button class="benefits-scroll-btn prev" id="benefitsPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="#333"/>
+                    </svg>
+                </button>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect x="12" y="16" width="24" height="20" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <path d="M24 22L28 26L24 30L20 26L24 22Z" fill="#FFE600"/>
+                                <rect x="18" y="12" width="12" height="4" fill="#FFE600"/>
+                            </svg>
+                        </div>
+                        <h3>Envío gratis</h3>
+                        <p>Benefíciate por ser tu primera compra.</p>
+                        <a href="#" class="benefit-link">Mostrar productos</a>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect x="12" y="14" width="24" height="20" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <circle cx="24" cy="24" r="5" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <path d="M24 21.5V24L25.5 25.5" stroke="#FFE600" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Ingresa a tu cuenta</h3>
+                        <p>Disfruta de ofertas y compra sin límites.</p>
+                        <a href="#" class="benefit-link">Ingresar a tu cuenta</a>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 12L28 20L32 24L28 28L24 36L20 28L16 24L20 20L24 12Z" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <circle cx="24" cy="24" r="3" fill="#FFE600"/>
+                            </svg>
+                        </div>
+                        <h3>Ingresa tu ubicación</h3>
+                        <p>Consulta costos y tiempos de entrega.</p>
+                        <a href="#" class="benefit-link">Ingresar ubicación</a>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect x="14" y="18" width="20" height="13" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <path d="M18 23H30M21 27H27" stroke="#FFE600" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Medios de pago</h3>
+                        <p>Paga tus compras de forma rápida y segura.</p>
+                        <a href="#" class="benefit-link">Conocer medios de pago</a>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="11" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <text x="24" y="29" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFE600">$</text>
+                            </svg>
+                        </div>
+                        <h3>Menos de $40.000</h3>
+                        <p>Descubre productos con precios bajos.</p>
+                        <a href="#" class="benefit-link">Mostrar productos</a>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect x="14" y="18" width="20" height="16" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
+                                <path d="M19 14V18M29 14V18" stroke="#FFE600" stroke-width="2"/>
+                                <path d="M18 23H30M18 27H30M18 31H26" stroke="#FFE600" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Más vendidos</h3>
+                        <p>Explora los productos que son tendencia.</p>
+                        <a href="#" class="benefit-link">Ir a Más vendidos</a>
+                    </div>
+                </div>
+                
+                <button class="benefits-scroll-btn next" id="benefitsNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" fill="#333"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banners -->
+    <section class="promo-banners">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-banner-card yellow">
+                    <div class="promo-content">
+                        <span class="promo-tag">GRANDES REBAJAS</span>
+                        <h3 class="promo-title">TODO A PRECIO DE<br>LIQUIDACIÓN</h3>
+                        <a href="#" class="promo-btn">Comprar aquí</a>
+                    </div>
+                </div>
+                
+                <div class="promo-banner-card red">
+                    <div class="promo-content centered">
+                        <div class="discount-badge-large">
+                            <span class="discount-number">70</span>
+                            <span class="discount-percent">%OFF</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-banner-card black">
+                    <div class="promo-content">
+                        <span class="promo-tag">IMPERDIBLES</span>
+                        <h3 class="promo-title">PRECIOS BAJOS CON<br>ENVÍOS RÁPIDOS</h3>
+                        <a href="#" class="promo-btn">Compra ya</a>
+                    </div>
+                </div>
+                
+                <div class="promo-banner-card orange">
+                    <div class="promo-content">
+                        <span class="promo-tag-white">Internacional</span>
+                        <div class="promo-image">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <rect x="20" y="30" width="80" height="60" rx="4" fill="white" opacity="0.3"/>
+                                <rect x="30" y="40" width="60" height="40" rx="2" fill="white" opacity="0.5"/>
+                                <circle cx="60" cy="60" r="15" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers" id="ofertas">
+        <div class="container">
+            <div class="offers-header-main">
+                <h2 class="offer-section-title-main">Ofertas</h2>
+                <a href="#ofertas" class="see-all-link">Mostrar todas las ofertas</a>
+            </div>
+            
+            <div class="offers-carousel-main">
+                <button class="offers-scroll-btn prev" id="offersPrev">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12.5 15L7.5 10L12.5 5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                
+                <div class="offers-scroll-main">
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop" alt="Audífonos">
+                        </div>
+                        <h3 class="offer-title">Qcy H3 Pro Anc Auriculares Bt 5.4 Conexión Dual 50Db...</h3>
+                        <div class="offer-price">
+                            <span class="price-before-small">$ 357.033</span>
+                            <div class="price-group">
+                                <span class="price-now">$ 158.614</span>
+                                <span class="discount-small">55% OFF</span>
+                            </div>
+                        </div>
+                        <p class="offer-installments">6 cuotas de $ 26.436 con 0% interés</p>
+                        <p class="offer-badge blue">Cupón $ 10.000 OFF</p>
+                        <p class="offer-badge gray">Internacional</p>
+                        <p class="offer-shipping">Envío gratis <span>por ser tu primera compra</span></p>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=200&h=200&fit=crop" alt="Kit de Pesas">
+                        </div>
+                        <h3 class="offer-title">Kit De Pesas Magnux Ejercicio Mancuernas Set Kit...</h3>
+                        <div class="offer-price">
+                            <span class="price-before-small">$ 993.000</span>
+                            <div class="price-group">
+                                <span class="price-now">$ 297.900</span>
+                                <span class="discount-small">70% OFF</span>
+                            </div>
+                        </div>
+                        <p class="offer-installments">3 cuotas de $ 99.300 con 0% interés</p>
+                        <p class="offer-shipping">Envío gratis <span>por ser tu primera compra</span></p>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=200&h=200&fit=crop" alt="Nebulizador">
+                        </div>
+                        <h3 class="offer-title">Nebulizador Pediátrico Adulto Piston Compresor...</h3>
+                        <div class="offer-price">
+                            <span class="price-before-small">$ 238.095</span>
+                            <div class="price-group">
+                                <span class="price-now">$ 100.000</span>
+                                <span class="discount-small">58% OFF</span>
+                            </div>
+                        </div>
+                        <p class="offer-installments">3 cuotas de $ 33.333 con 0% interés</p>
+                        <p class="offer-shipping">Envío gratis <span>por ser tu primera compra</span></p>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=200&h=200&fit=crop" alt="Proyector">
+                        </div>
+                        <h3 class="offer-title">Proyector Video Beam Portátil Fhd Ps 4K Hd 720p...</h3>
+                        <div class="offer-price">
+                            <span class="price-before-small">$ 586.385</span>
+                            <div class="price-group">
+                                <span class="price-now">$ 309.429</span>
+                                <span class="discount-small">47% OFF</span>
+                            </div>
+                        </div>
+                        <p class="offer-installments">6 cuotas de $ 51.572 con 0% interés</p>
+                        <p class="offer-shipping">Envío gratis <span>por ser tu primera compra</span></p>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=200&h=200&fit=crop" alt="Smartwatch">
+                        </div>
+                        <h3 class="offer-title">Smartwatch Reloj Inteligente Deportivo Bluetooth...</h3>
+                        <div class="offer-price">
+                            <span class="price-before-small">$ 450.000</span>
+                            <div class="price-group">
+                                <span class="price-now">$ 189.900</span>
+                                <span class="discount-small">58% OFF</span>
+                            </div>
+                        </div>
+                        <p class="offer-installments">6 cuotas de $ 31.650 con 0% interés</p>
+                        <p class="offer-shipping">Envío gratis <span>por ser tu primera compra</span></p>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=200&h=200&fit=crop" alt="Tensiómetro">
+                        </div>
+                        <h3 class="offer-title">Tensiómetro Digital Batería Recargable Usb Monitor...</h3>
+                        <div class="offer-price">
+                            <span class="price-before-small">$ 200.000</span>
+                            <div class="price-group">
+                                <span class="price-now">$ 79.000</span>
+                                <span class="discount-small">60% OFF</span>
+                            </div>
+                        </div>
+                        <p class="offer-installments">6 cuotas de $ 13.167 con 0% interés</p>
+                        <p class="offer-shipping">Envío gratis <span>por ser tu primera compra</span></p>
+                    </div>
+                </div>
+                
+                <button class="offers-scroll-btn next" id="offersNext">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="payment-methods">
+        <div class="container">
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <rect x="10" y="20" width="40" height="25" rx="2" stroke="#009EE3" stroke-width="2" fill="none"/>
+                            <rect x="10" y="25" width="40" height="5" fill="#009EE3"/>
+                        </svg>
+                    </div>
+                    <h3>Paga con tarjeta o en efectivo</h3>
+                    <p>Con Mercado Pago, paga en cuotas y aprovecha la comodidad de financiación que te da tu banco, o hazlo con efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+                    <a href="#" class="payment-link">Cómo pagar con Mercado Pago</a>
+                </div>
+
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <path d="M30 15L35 25H25L30 15Z" fill="#009EE3"/>
+                            <rect x="20" y="25" width="20" height="15" stroke="#009EE3" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Envío gratis por ser tu primera compra</h3>
+                    <p>Aprovecha este beneficio en millones de productos seleccionados.</p>
+                    <a href="#" class="payment-link">Conocer más</a>
+                </div>
+
+                <div class="payment-card">
+                    <div class="payment-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <path d="M30 15L25 25L30 35L35 25L30 15Z" stroke="#009EE3" stroke-width="2" fill="none"/>
+                            <circle cx="30" cy="30" r="5" fill="#009EE3"/>
+                        </svg>
+                    </div>
+                    <h3>Seguridad, de principio a fin</h3>
+                    <p>¿No te gusta? ¡Devuélvelo! En Mercado Libre, no hay nada que no puedas hacer, porque estás siempre protegido.</p>
+                    <a href="#" class="payment-link">Cómo te protegemos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Searches -->
+    <section class="popular-searches">
+        <div class="container">
+            <h2>Productos más buscados</h2>
+            <div class="search-tags">
+                <a href="#">Air Fryer</a>
+                <a href="#">Aire Acondicionado</a>
+                <a href="#">Aire Acondicionado Portátil</a>
+                <a href="#">Apple Tv</a>
+                <a href="#">Apple Watch</a>
+                <a href="#">Auriculares</a>
+                <a href="#">Auriculares Inalámbricos</a>
+                <a href="#">Backpack</a>
+                <a href="#">Gps</a>
+                <a href="#">Iphone</a>
+                <a href="#">Iphone X</a>
+                <a href="#">Iphone 11</a>
+                <a href="#">Iphone 12 Pro</a>
+                <a href="#">Iphone 12 Pro Max</a>
+                <a href="#">Iphone 16</a>
+                <a href="#">Iphone 16 Pro</a>
+                <a href="#">Iphone 16 Pro Max</a>
+                <a href="#">Laptop</a>
+                <a href="#">Lavadora</a>
+                <a href="#">Lavadora Lg</a>
+                <a href="#">Motorola</a>
+                <a href="#">Nintendo</a>
+                <a href="#">Nintendo Switch</a>
+                <a href="#">Dyson Neon</a>
+                <a href="#">Playstation 5</a>
+                <a href="#">Redmi</a>
+                <a href="#">Redmi Note 9</a>
+                <a href="#">Reloj Inteligente</a>
+                <a href="#">Roku</a>
+                <a href="#">Ios 13 Plus</a>
+                <a href="#">Samsung</a>
+                <a href="#">Samsung A20</a>
+                <a href="#">Samsung Galaxy A54</a>
+                <a href="#">Samsung S24 Ultra</a>
+                <a href="#">Silla Gamer</a>
+                <a href="#">Smartwatch</a>
+                <a href="#">Tablet</a>
+                <a href="#">Ipad</a>
+                <a href="#">Ipad 9</a>
+                <a href="#">Ipad 10</a>
+                <a href="#">Ipad Air</a>
+                <a href="#">Ipad Pro</a>
+                <a href="#">Iphone 16 Pro Max</a>
+                <a href="#">Iphone 16 Pro</a>
+                <a href="#">Iphone 16</a>
+                <a href="#">Webcam</a>
+                <a href="#">Xbox</a>
+                <a href="#">Xbox Series X</a>
+                <a href="#">Xbox Series S</a>
+                <a href="#">Xiaomi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alphabetical Search -->
+    <section class="alphabetical-search">
+        <div class="container">
+            <h2>Buscar productos por letra inicial</h2>
+            <div class="alphabet-links">
+                <a href="#">A</a>
+                <span>-</span>
+                <a href="#">B</a>
+                <span>-</span>
+                <a href="#">C</a>
+                <span>-</span>
+                <a href="#">D</a>
+                <span>-</span>
+                <a href="#">E</a>
+                <span>-</span>
+                <a href="#">F</a>
+                <span>-</span>
+                <a href="#">G</a>
+                <span>-</span>
+                <a href="#">H</a>
+                <span>-</span>
+                <a href="#">I</a>
+                <span>-</span>
+                <a href="#">J</a>
+                <span>-</span>
+                <a href="#">K</a>
+                <span>-</span>
+                <a href="#">L</a>
+                <span>-</span>
+                <a href="#">M</a>
+                <span>-</span>
+                <a href="#">N</a>
+                <span>-</span>
+                <a href="#">O</a>
+                <span>-</span>
+                <a href="#">P</a>
+                <span>-</span>
+                <a href="#">Q</a>
+                <span>-</span>
+                <a href="#">R</a>
+                <span>-</span>
+                <a href="#">S</a>
+                <span>-</span>
+                <a href="#">T</a>
+                <span>-</span>
+                <a href="#">U</a>
+                <span>-</span>
+                <a href="#">V</a>
+                <span>-</span>
+                <a href="#">W</a>
+                <span>-</span>
+                <a href="#">X</a>
+                <span>-</span>
+                <a href="#">Y</a>
+                <span>-</span>
+                <a href="#">Z</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Portfolio Section -->
+    <section class="dev-portfolio">
+        <div class="container">
+            <h2>Portafolio de Desarrolladores</h2>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Los portafolios se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Trabaja con nosotros</h4>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Promociones</a>
+                    <a href="#">Cómo cuidamos tu privacidad</a>
+                    <a href="#">Accesibilidad</a>
+                    <a href="#">Ayuda / PQR</a>
+                    <a href="#">Navidad</a>
+                    <a href="#">mercado.go.co</a>
+                </div>
+                <div class="footer-section">
+                    <p>Copyright © 1999-2026 Mercado Libre Colombia LTDA.</p>
+                    <p>Carrera 17A #93-09 Piso 3, Bogotá D.C., Colombia</p>
+                </div>
+                <div class="footer-badges">
+                    <img src="https://via.placeholder.com/100x50/FFFFFF/333333?text=Industria" alt="Industria y Comercio">
+                    <img src="https://via.placeholder.com/100x50/FFFFFF/333333?text=PQRS" alt="PQRS">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
