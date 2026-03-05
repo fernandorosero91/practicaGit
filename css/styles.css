@@ -1018,68 +1018,77 @@ body {
 
 /* Popular Searches */
 .popular-searches {
-    padding: 40px 0;
-    background-color: #f5f5f5;
+    padding: 32px 0;
+    background-color: white;
 }
 
 .popular-searches h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 16px;
     color: #333;
+    font-weight: 600;
 }
 
-.search-tags {
+.search-products {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 4px 8px;
+    align-items: center;
+    line-height: 1.8;
 }
 
-.search-tags a {
-    color: #3483FA;
+.search-products a {
+    color: #333;
     text-decoration: none;
-    font-size: 14px;
-    padding: 8px 12px;
-    background-color: white;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    font-size: 13px;
+    transition: color 0.2s;
 }
 
-.search-tags a:hover {
-    background-color: #e8e8e8;
+.search-products a:hover {
+    color: #3483FA;
+}
+
+.search-products .separator {
+    color: #999;
+    font-size: 13px;
 }
 
 /* Alphabetical Search */
 .alphabetical-search {
-    padding: 40px 0;
+    padding: 32px 0;
     background-color: white;
+    border-top: 1px solid #e5e5e5;
 }
 
 .alphabetical-search h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 16px;
     color: #333;
+    font-weight: 600;
 }
 
 .alphabet-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 4px 8px;
     align-items: center;
+    line-height: 1.8;
 }
 
 .alphabet-links a {
-    color: #3483FA;
+    color: #333;
     text-decoration: none;
-    font-size: 14px;
-    padding: 5px 10px;
+    font-size: 13px;
+    transition: color 0.2s;
 }
 
 .alphabet-links a:hover {
-    text-decoration: underline;
+    color: #3483FA;
 }
 
 .alphabet-links span {
     color: #999;
+    font-size: 13px;
 }
 
 /* Developer Portfolio */
