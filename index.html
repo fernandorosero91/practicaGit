@@ -41,7 +41,15 @@
                         <a href="#">Cupones</a>
                         <a href="#">Supermercado</a>
                         <a href="#">Moda</a>
-                        <a href="#dev-portfolio">Nuestro Equipo</a>
+                        <div class="nav-dropdown">
+                            <a href="#dev-portfolio" class="nav-dropdown-toggle">Nuestro Equipo</a>
+                            <div class="nav-dropdown-menu">
+                                <a href="portafolio/dev1/index.html">Felipe Narvaes</a>
+                                <a href="portafolio/dev2/index.html">Fernando Rosero</a>
+                                <a href="portafolio/dev3/index.html">Nicol Muñoz</a>
+                                <a href="portafolio/dev4/index.html">Yeraldin Araujo</a>
+                            </div>
+                        </div>
                         <a href="#">Vender</a>
                         <a href="#">Ayuda / PQR</a>
                     </nav>
@@ -122,9 +130,16 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <rect x="12" y="16" width="24" height="20" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <path d="M24 22L28 26L24 30L20 26L24 22Z" fill="#FFE600"/>
-                                <rect x="18" y="12" width="12" height="4" fill="#FFE600"/>
+                                <!-- Caja -->
+                                <rect x="14" y="20" width="20" height="16" rx="1" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <path d="M14 24 L24 28 L34 24" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <line x1="24" y1="28" x2="24" y2="36" stroke="#333" stroke-width="1.5"/>
+                                <!-- Tapa de la caja -->
+                                <path d="M14 20 L24 16 L34 20" stroke="#333" stroke-width="1.5" fill="#FFE600"/>
+                                <!-- Regalo/moño -->
+                                <circle cx="18" cy="14" r="2.5" fill="#FFE600"/>
+                                <circle cx="22" cy="14" r="2.5" fill="#FFE600"/>
+                                <rect x="19" y="14" width="2" height="6" fill="#FFE600"/>
                             </svg>
                         </div>
                         <h3>Envío gratis</h3>
@@ -135,9 +150,13 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <rect x="12" y="14" width="24" height="20" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <circle cx="24" cy="24" r="5" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <path d="M24 21.5V24L25.5 25.5" stroke="#FFE600" stroke-width="2"/>
+                                <!-- Carpeta/Cuenta -->
+                                <rect x="12" y="18" width="24" height="16" rx="2" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <path d="M12 22 L36 22" stroke="#333" stroke-width="1.5"/>
+                                <rect x="12" y="18" width="10" height="4" rx="1" fill="#FFE600"/>
+                                <!-- Persona -->
+                                <circle cx="24" cy="28" r="3.5" stroke="#333" stroke-width="1.5" fill="#FFE600"/>
+                                <path d="M18 34 Q18 30 24 30 Q30 30 30 34" stroke="#333" stroke-width="1.5" fill="none"/>
                             </svg>
                         </div>
                         <h3>Ingresa a tu cuenta</h3>
@@ -148,8 +167,15 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 12L28 20L32 24L28 28L24 36L20 28L16 24L20 20L24 12Z" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <circle cx="24" cy="24" r="3" fill="#FFE600"/>
+                                <!-- Sobre -->
+                                <rect x="12" y="16" width="24" height="18" rx="1.5" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <path d="M12 16 L24 26 L36 16" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <path d="M12 34 L20 26" stroke="#333" stroke-width="1.5"/>
+                                <path d="M36 34 L28 26" stroke="#333" stroke-width="1.5"/>
+                                <!-- Pin de ubicación -->
+                                <circle cx="28" cy="22" r="5" fill="#FFE600" stroke="#333" stroke-width="1.5"/>
+                                <circle cx="28" cy="22" r="2" fill="#333"/>
+                                <path d="M28 27 L28 30" stroke="#333" stroke-width="1.5"/>
                             </svg>
                         </div>
                         <h3>Ingresa tu ubicación</h3>
@@ -160,8 +186,13 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <rect x="14" y="18" width="20" height="13" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <path d="M18 23H30M21 27H27" stroke="#FFE600" stroke-width="2"/>
+                                <!-- Billetera -->
+                                <rect x="14" y="20" width="20" height="14" rx="2" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <rect x="14" y="20" width="20" height="5" rx="2" fill="#FFE600"/>
+                                <line x1="18" y1="28" x2="22" y2="28" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="18" y1="31" x2="26" y2="31" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+                                <!-- Detalle de cierre -->
+                                <circle cx="30" cy="27" r="1.5" fill="#333"/>
                             </svg>
                         </div>
                         <h3>Medios de pago</h3>
@@ -172,8 +203,13 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="11" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <text x="24" y="29" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFE600">$</text>
+                                <!-- Moneda/Precio -->
+                                <circle cx="24" cy="24" r="10" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <circle cx="24" cy="24" r="7" fill="#FFE600"/>
+                                <text x="24" y="29" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">$</text>
+                                <!-- Líneas de precio bajo -->
+                                <line x1="16" y1="14" x2="19" y2="17" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="32" y1="14" x2="29" y2="17" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
                         <h3>Menos de $40.000</h3>
@@ -184,9 +220,13 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <rect x="14" y="18" width="20" height="16" rx="1.5" stroke="#FFE600" stroke-width="2" fill="none"/>
-                                <path d="M19 14V18M29 14V18" stroke="#FFE600" stroke-width="2"/>
-                                <path d="M18 23H30M18 27H30M18 31H26" stroke="#FFE600" stroke-width="1.5"/>
+                                <!-- Bolsas de compras -->
+                                <rect x="14" y="18" width="10" height="14" rx="1" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <path d="M17 18 Q17 14 19 14 Q21 14 21 18" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <rect x="24" y="16" width="10" height="16" rx="1" stroke="#333" stroke-width="1.5" fill="#FFE600"/>
+                                <path d="M27 16 Q27 12 29 12 Q31 12 31 16" stroke="#333" stroke-width="1.5" fill="none"/>
+                                <!-- Estrella de tendencia -->
+                                <path d="M29 24 L30 26 L32 26 L30.5 27.5 L31 29.5 L29 28 L27 29.5 L27.5 27.5 L26 26 L28 26 Z" fill="#333"/>
                             </svg>
                         </div>
                         <h3>Más vendidos</h3>
@@ -208,44 +248,38 @@
     <section class="promo-banners">
         <div class="container">
             <div class="promo-grid">
-                <div class="promo-banner-card yellow">
-                    <div class="promo-content">
-                        <span class="promo-tag">GRANDES REBAJAS</span>
-                        <h3 class="promo-title">TODO A PRECIO DE<br>LIQUIDACIÓN</h3>
-                        <a href="#" class="promo-btn yellow-btn">Comprar aquí</a>
-                    </div>
-                </div>
-                
-                <div class="promo-banner-card red">
-                    <div class="promo-content centered">
-                        <span class="promo-tag-white small">HASTA</span>
-                        <div class="discount-badge-large">
-                            <span class="discount-number">70</span>
-                            <span class="discount-percent">%OFF</span>
+                <!-- Grupo 1: Amarillo + 70OFF (sin espacio entre ellos) -->
+                <div class="promo-group">
+                    <div class="promo-banner-card yellow">
+                        <div class="promo-content">
+                            <span class="promo-tag">GRANDES REBAJAS</span>
+                            <h3 class="promo-title">TODO A PRECIO DE<br>LIQUIDACIÓN</h3>
+                            <a href="#" class="promo-btn yellow-btn">Comprar aquí</a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="promo-banner-card dark">
-                    <div class="promo-content">
-                        <span class="promo-tag-white">IMPERDIBLES</span>
-                        <h3 class="promo-title-white">PRECIOS BAJOS CON<br>ENVÍOS RÁPIDOS</h3>
-                        <a href="#" class="promo-btn dark-btn">Compra ya</a>
+                    
+                    <div class="promo-banner-card red">
+                        <img src="img/70off.png" alt="70% OFF" class="promo-image">
                     </div>
                 </div>
                 
-                <div class="promo-banner-card orange">
-                    <div class="promo-content centered">
-                        <span class="promo-tag-white">INTERNACIONAL</span>
-                        <div class="promo-image-box">
-                            <svg width="100" height="80" viewBox="0 0 100 80" fill="none">
-                                <rect x="10" y="15" width="80" height="50" rx="3" fill="white" opacity="0.9"/>
-                                <rect x="20" y="25" width="60" height="30" rx="2" fill="white" opacity="0.7"/>
-                            </svg>
+                <!-- Grupo 2: Morado + Top Marcas (sin espacio entre ellos) -->
+                <div class="promo-group">
+                    <div class="promo-banner-card purple">
+                        <div class="promo-content">
+                            <span class="promo-tag-white">DIRECTO DESDE USA</span>
+                            <h3 class="promo-title-white">PAGA MENOS EN<br>TOP MARCAS</h3>
+                            <a href="#" class="promo-btn purple-btn">Compra ahora</a>
                         </div>
+                    </div>
+                    
+                    <div class="promo-banner-card image-card">
+                        <img src="img/topmarcas.png" alt="Top Marcas" class="promo-image">
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
         </div>
     </section>
 
