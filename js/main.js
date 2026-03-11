@@ -244,6 +244,44 @@ window.addEventListener('load', function() {
     }
 });
 
+// Best Sellers scroll functionality
+window.addEventListener('load', function() {
+    const bestSellersScroll = document.querySelector('.best-sellers-scroll');
+    const bestSellersPrev = document.getElementById('bestSellersPrev');
+    const bestSellersNext = document.getElementById('bestSellersNext');
+    
+    if (bestSellersScroll && bestSellersPrev && bestSellersNext) {
+        bestSellersPrev.addEventListener('click', function() {
+            bestSellersScroll.scrollBy({
+                left: -240,
+                behavior: 'smooth'
+            });
+        });
+        
+        bestSellersNext.addEventListener('click', function() {
+            bestSellersScroll.scrollBy({
+                left: 240,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Update button visibility
+        function updateBestSellersButtons() {
+            const scrollLeft = bestSellersScroll.scrollLeft;
+            const maxScroll = bestSellersScroll.scrollWidth - bestSellersScroll.clientWidth;
+            
+            bestSellersPrev.style.opacity = scrollLeft > 0 ? '1' : '0.3';
+            bestSellersPrev.style.pointerEvents = scrollLeft > 0 ? 'auto' : 'none';
+            
+            bestSellersNext.style.opacity = scrollLeft < maxScroll - 10 ? '1' : '0.3';
+            bestSellersNext.style.pointerEvents = scrollLeft < maxScroll - 10 ? 'auto' : 'none';
+        }
+        
+        bestSellersScroll.addEventListener('scroll', updateBestSellersButtons);
+        updateBestSellersButtons();
+    }
+});
+
 // Update offers scroll to use new class
 window.addEventListener('load', function() {
     const offersScroll = document.querySelector('.offers-scroll-main');
