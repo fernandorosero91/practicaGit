@@ -27,6 +27,12 @@
                 </div>
                 
                 <div class="header-row-2">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
                     <div class="location">
                         <svg width="14" height="18" viewBox="0 0 14 18" fill="none">
                             <path d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 18 7 18C7 18 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="rgba(0,0,0,.55)"/>
@@ -68,6 +74,34 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <strong>Menú</strong>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#">Categorías</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#">Cupones</a>
+            <a href="#">Supermercado</a>
+            <a href="#">Moda</a>
+            <a href="#">Vender</a>
+            <a href="#">Ayuda / PQR</a>
+            <a href="#">Crea tu cuenta</a>
+            <a href="#">Ingresa</a>
+            <a href="#">Mis compras</a>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
+                <strong style="display: block; margin-bottom: 10px; color: #333;">Nuestro Equipo</strong>
+                <a href="portafolio/dev1/index.html">Felipe Narvaes</a>
+                <a href="portafolio/dev2/index.html">Fernando Rosero</a>
+                <a href="portafolio/dev3/index.html">Nicol Muñoz</a>
+                <a href="portafolio/dev4/index.html">Yeraldin Araujo</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Carousel Section -->
     <section class="hero-carousel">

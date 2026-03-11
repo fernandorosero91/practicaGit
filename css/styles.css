@@ -142,6 +142,109 @@ body {
     align-items: center;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: rgba(0,0,0,.7);
+    transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+.mobile-nav-header {
+    padding: 20px;
+    background-color: #FFE600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(0,0,0,.7);
+}
+
+.mobile-nav-links {
+    padding: 20px;
+}
+
+.mobile-nav-links a {
+    display: block;
+    padding: 12px 0;
+    color: rgba(0,0,0,.7);
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.2s;
+}
+
+.mobile-nav-links a:hover {
+    color: #3483FA;
+}
+
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
 .header-link {
     color: rgba(0,0,0,.55);
     text-decoration: none;
@@ -549,6 +652,8 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 8px 16px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-snap-type: x proximity; /* Snap scrolling */
 }
 
 .benefits-grid::-webkit-scrollbar {
@@ -565,6 +670,7 @@ body {
     min-width: 220px;
     max-width: 220px;
     flex-shrink: 0;
+    scroll-snap-align: start; /* Snap to start of card */
 }
 
 .benefit-card:hover {
@@ -926,6 +1032,8 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 8px 4px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-snap-type: x proximity; /* Snap scrolling */
 }
 
 .offers-scroll-main::-webkit-scrollbar {
@@ -945,6 +1053,7 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    scroll-snap-align: start; /* Snap to start of card */
 }
 
 .offer-card:hover {
@@ -1440,46 +1549,140 @@ body {
 }
 
 /* Responsive Design */
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .header-row-2 {
+        font-size: 12px;
+    }
+    
+    .header-nav {
+        gap: 12px;
+    }
+    
+    .header-nav a {
+        font-size: 12px;
+    }
+    
+    .header-actions {
+        gap: 12px;
+    }
+    
+    .search-bar {
+        max-width: 400px;
+    }
+    
+    .carousel-container {
+        height: 350px;
+    }
+    
+    .promo-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .promo-group {
+        width: 100%;
+        max-width: 582px;
+    }
+    
+    .payment-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Móviles grandes (481px - 768px) */
 @media (max-width: 768px) {
+    .header-row-1 {
+        flex-wrap: wrap;
+    }
+    
+    .header-row-2 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
     .header-nav {
         display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .mobile-nav {
+        display: block;
+    }
+    
+    .location {
+        font-size: 11px;
+    }
+    
+    .header-actions {
+        gap: 10px;
+    }
+    
+    .header-link {
+        font-size: 11px;
     }
     
     .logo-img {
         height: 28px;
     }
     
+    .search-bar {
+        width: 100%;
+        max-width: 100%;
+        order: 3;
+    }
+    
+    .search-input {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
     .carousel-container {
-        height: 300px;
+        height: 280px;
     }
     
     .hero-title {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .hero-title-alt {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .discount-text {
-        font-size: 40px;
+        font-size: 36px;
     }
     
     .carousel-btn {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
     }
     
     .carousel-btn.prev {
-        left: 10px;
+        left: 8px;
     }
     
     .carousel-btn.next {
-        right: 10px;
+        right: 8px;
     }
     
     .hero-kitchen {
         flex-direction: column;
+        padding: 20px;
     }
     
     .hero-right {
@@ -1487,28 +1690,490 @@ body {
         width: 100%;
     }
     
+    .benefits {
+        padding: 16px 0;
+    }
+    
+    .benefits-scroll-container {
+        padding: 0;
+    }
+    
     .benefits-grid {
-        grid-template-columns: 1fr;
+        padding: 8px 8px;
+        gap: 10px;
+    }
+    
+    .benefit-card {
+        min-width: 180px;
+        max-width: 180px;
+        padding: 16px 12px;
+    }
+    
+    .benefit-card h3 {
+        font-size: 14px;
+    }
+    
+    .benefit-card p {
+        font-size: 12px;
+    }
+    
+    .benefits-scroll-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .benefits-scroll-btn.prev {
+        left: 8px;
+    }
+    
+    .benefits-scroll-btn.next {
+        right: 8px;
+    }
+    
+    .promo-banners {
+        padding: 16px 0;
     }
     
     .promo-grid {
-        grid-template-columns: 1fr;
+        gap: 12px;
     }
     
-    .offers-grid {
-        grid-template-columns: 1fr;
+    .promo-group {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .promo-banner-card {
+        height: 120px;
+    }
+    
+    .promo-banner-card.yellow,
+    .promo-banner-card.red,
+    .promo-banner-card.purple,
+    .promo-banner-card.image-card {
+        width: 100%;
+    }
+    
+    .promo-title,
+    .promo-title-white {
+        font-size: 16px;
+    }
+    
+    .promo-tag,
+    .promo-tag-white {
+        font-size: 9px;
+    }
+    
+    .promo-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    .offers {
+        padding: 24px 0;
+    }
+    
+    .offers-header-main {
+        margin-bottom: 16px;
+    }
+    
+    .offer-section-title-main {
+        font-size: 22px;
+    }
+    
+    .offers-carousel-main {
+        padding: 0 40px;
+    }
+    
+    .offers-scroll-main {
+        gap: 10px;
+    }
+    
+    .offer-card {
+        min-width: 180px;
+        max-width: 180px;
+        min-height: 380px;
+        padding: 12px;
+    }
+    
+    .offer-image {
+        height: 150px;
+    }
+    
+    .offer-title {
+        font-size: 12px;
+    }
+    
+    .price-now {
+        font-size: 20px;
+    }
+    
+    .offers-scroll-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .popular-searches,
+    .alphabetical-search {
+        padding: 24px 0;
+    }
+    
+    .popular-searches h2,
+    .alphabetical-search h2 {
+        font-size: 18px;
+    }
+    
+    .search-products,
+    .alphabet-links {
+        font-size: 12px;
+    }
+    
+    .payment-methods {
+        padding: 40px 0;
     }
     
     .payment-grid {
-        grid-template-columns: 1fr;
+        gap: 24px;
     }
     
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
     
-    .section-tabs {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    .header-main {
+        padding: 8px 0;
+    }
+    
+    .header-row-1 {
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+    
+    .logo-img {
+        height: 24px;
+    }
+    
+    .search-input {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+    
+    .search-button {
+        padding: 0 10px;
+    }
+    
+    .header-row-2 {
+        font-size: 10px;
+        gap: 8px;
+    }
+    
+    .location {
+        font-size: 10px;
+        gap: 4px;
+    }
+    
+    .location svg {
+        width: 12px;
+        height: 14px;
+    }
+    
+    .header-actions {
+        gap: 8px;
+    }
+    
+    .header-link {
+        font-size: 10px;
+    }
+    
+    .cart-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .carousel-container {
+        height: 220px;
+    }
+    
+    .carousel-btn {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .carousel-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+        gap: 6px;
+    }
+    
+    .indicator {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .indicator.active {
+        width: 18px;
+    }
+    
+    .benefits {
+        padding: 12px 0;
+    }
+    
+    .benefits-grid {
+        padding: 6px 4px;
+        gap: 8px;
+    }
+    
+    .benefit-card {
+        min-width: 160px;
+        max-width: 160px;
+        padding: 14px 10px;
+    }
+    
+    .benefit-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .benefit-card h3 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    
+    .benefit-card p {
+        font-size: 11px;
+        min-height: 30px;
+    }
+    
+    .benefit-link {
+        font-size: 11px;
+        padding: 5px 6px;
+    }
+    
+    .benefits-scroll-btn {
+        width: 28px;
+        height: 28px;
+        display: none; /* Hide scroll buttons on small screens */
+    }
+    
+    .benefits-scroll-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .promo-banners {
+        padding: 12px 0;
+    }
+    
+    .promo-grid {
+        gap: 10px;
+    }
+    
+    .promo-banner-card {
+        height: 100px;
+    }
+    
+    .promo-content {
+        padding: 14px 16px;
+    }
+    
+    .promo-tag,
+    .promo-tag-white {
+        font-size: 8px;
+        margin-bottom: 6px;
+    }
+    
+    .promo-title,
+    .promo-title-white {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .promo-btn {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+    
+    .offers {
+        padding: 20px 0;
+    }
+    
+    .offers-header-main {
+        margin-bottom: 12px;
+    }
+    
+    .offer-section-title-main {
+        font-size: 20px;
+    }
+    
+    .see-all-link {
+        font-size: 12px;
+    }
+    
+    .offers-carousel-main {
+        padding: 0 32px;
+    }
+    
+    .offers-scroll-main {
+        gap: 8px;
+        padding: 6px 2px;
+    }
+    
+    .offer-card {
+        min-width: 160px;
+        max-width: 160px;
+        min-height: 360px;
+        padding: 10px;
+    }
+    
+    .offer-image {
+        height: 130px;
+        margin-bottom: 10px;
+    }
+    
+    .offer-title {
+        font-size: 11px;
+        margin-bottom: 8px;
+        min-height: 30px;
+    }
+    
+    .price-before-small {
+        font-size: 11px;
+    }
+    
+    .price-now {
+        font-size: 18px;
+    }
+    
+    .discount-small {
+        font-size: 11px;
+        padding: 2px 5px;
+    }
+    
+    .offer-installments,
+    .offer-shipping {
+        font-size: 11px;
+    }
+    
+    .offer-badge {
+        font-size: 11px;
+    }
+    
+    .offers-scroll-btn {
+        width: 28px;
+        height: 28px;
+        display: none; /* Hide scroll buttons on small screens */
+    }
+    
+    .offers-scroll-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .popular-searches,
+    .alphabetical-search {
+        padding: 20px 0;
+    }
+    
+    .popular-searches h2,
+    .alphabetical-search h2 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .search-products a,
+    .alphabet-links a {
+        font-size: 11px;
+    }
+    
+    .search-products .separator,
+    .alphabet-links span {
+        font-size: 11px;
+    }
+    
+    .payment-methods {
+        padding: 32px 0;
+    }
+    
+    .payment-card {
+        padding: 0;
+    }
+    
+    .payment-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .payment-card h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .payment-card p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .payment-link {
+        font-size: 13px;
+    }
+    
+    .footer {
+        padding: 30px 0 15px;
+    }
+    
+    .footer-section h4 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-section a {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-section p {
+        font-size: 11px;
+    }
+    
+    .footer-badges {
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .footer-badges img {
+        height: 32px;
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 360px) */
+@media (max-width: 360px) {
+    .benefit-card {
+        min-width: 140px;
+        max-width: 140px;
+    }
+    
+    .offer-card {
+        min-width: 140px;
+        max-width: 140px;
+    }
+    
+    .offers-carousel-main {
+        padding: 0 28px;
     }
 }
